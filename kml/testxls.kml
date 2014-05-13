@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+  <Folder>
+    <name>kml</name>
+    <Style id="gg-pin-green">
+      <IconStyle>
+        <Icon>
+          <href>img/gg-pin-green.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="gg-pin-pink">
+      <IconStyle>
+        <Icon>
+          <href>img/gg-pin-pink.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="gg-pin-blue">
+      <IconStyle>
+        <Icon>
+          <href>img/gg-pin-blue.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>กกก</name>
+      <description>ขขข</description>
+      <styleUrl>#gg-pin-green</styleUrl>
+      <f1>คคค</f1>
+      <f2>งงง</f2>
+      <Point>
+        <coordinates>100.0,14.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>aaa</name>
+      <description>bbb</description>
+      <styleUrl>#gg-pin-blue</styleUrl>
+      <f1>ccc</f1>
+      <f2>ddd</f2>
+      <Point>
+        <coordinates>101.0,15.0</coordinates>
+      </Point>
+    </Placemark>
+  </Folder>
+</kml>

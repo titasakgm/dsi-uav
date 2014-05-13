@@ -1,0 +1,69 @@
+#!/usr/local/rvm/bin/ruby
+# -*- encoding : utf-8 -*-
+
+require 'cgi'
+require 'net/http'
+require 'rubygems'
+require 'json'
+require 'pg'
+
+def log(msg)
+  f = open("/tmp/search-flightplan.log","a")
+  f.write(msg)
+  f.write("\n")
+  f.close
+end
+
+def search_flightplan(q)
+  con = PGconn.connect("localhost",5432,nil,nil,"dsi","admin")
+  sql = "SELECT * FROM flightplan "
+  sql += "WHERE flightdate || description LIKE '%#{q}%' "
+  log("search-flightplan: #{sql}")
+  res = con.exec(sql)
+  con.close
+
+  found = res.num_tuples
+  return_data = Hash.new
+  records = []
+
+  if found == 0
+    return_data[:success] = true
+    return_data[:totalcount] = 0
+    return_data[:records] = [{
+      :flightdate => 'NA',
+      :flightno => 'NA',
+      :description => 'NA',
+      :sql => sql
+    }]
+  else
+    res.each do |rec|
+      fd = rec['flightdate'].strip
+      no = rec['flightno'].strip
+      desc = rec['description'].strip
+      kml = "kml/#{fd}-#{no}.kml"
+      dat = {:flightdate => "#{fd}",:flightno => "#{no}", :description => "#{desc}", :kmlname => "#{kml}" }
+      records.push(dat)
+    end
+    return_data[:success] = true
+    return_data[:totalcount] = found
+    return_data[:records] = records
+  end
+  return_data
+end
+
+c = CGI::new
+query = c['query']
+start = c['start'].to_i
+limit = c['limit'].to_i
+
+if start == 0
+  limit = 5
+end
+
+data = search_flightplan(query)
+
+print <<EOF
+Content-type: text/html
+
+#{data.to_json}
+EOF

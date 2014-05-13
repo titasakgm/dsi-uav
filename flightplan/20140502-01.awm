@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-16" standalone="yes"?>
+<Mission MissionTimeLmt="65535" IsPatrol="Continuous" StartWayPointIndex="0" VerticalSpeedLimit="1.5">
+  <WayPoint id="0">
+    <Latitude>13.90</Latitude>
+    <Longitude>100.53</Longitude>
+    <Altitude>200</Altitude>
+    <Speed>20</Speed>
+    <TimeLimit>33</TimeLimit>
+    <YawDegree>360</YawDegree>
+    <HoldTime>3</HoldTime>
+    <StartDelay>0</StartDelay>
+    <Period>0</Period>
+    <RepeatTime>0</RepeatTime>
+    <RepeatDistance>0</RepeatDistance>
+    <TurnMode>StopAndTurn</TurnMode>
+  </WayPoint>
+  <WayPoint id="1">
+    <Latitude>13.92</Latitude>
+    <Longitude>100.53</Longitude>
+    <Altitude>200</Altitude>
+    <Speed>20</Speed>
+    <TimeLimit>33</TimeLimit>
+    <YawDegree>360</YawDegree>
+    <HoldTime>3</HoldTime>
+    <StartDelay>0</StartDelay>
+    <Period>0</Period>
+    <RepeatTime>0</RepeatTime>
+    <RepeatDistance>0</RepeatDistance>
+    <TurnMode>StopAndTurn</TurnMode>
+  </WayPoint>
+  <WayPoint id="2">
+    <Latitude>13.90</Latitude>
+    <Longitude>100.55</Longitude>
+    <Altitude>200</Altitude>
+    <Speed>20</Speed>
+    <TimeLimit>33</TimeLimit>
+    <YawDegree>360</YawDegree>
+    <HoldTime>3</HoldTime>
+    <StartDelay>0</StartDelay>
+    <Period>0</Period>
+    <RepeatTime>0</RepeatTime>
+    <RepeatDistance>0</RepeatDistance>
+    <TurnMode>StopAndTurn</TurnMode>
+  </WayPoint>
+  <WayPoint id="3">
+    <Latitude>13.92</Latitude>
+    <Longitude>100.55</Longitude>
+    <Altitude>200</Altitude>
+    <Speed>20</Speed>
+    <TimeLimit>33</TimeLimit>
+    <YawDegree>360</YawDegree>
+    <HoldTime>3</HoldTime>
+    <StartDelay>0</StartDelay>
+    <Period>0</Period>
+    <RepeatTime>0</RepeatTime>
+    <RepeatDistance>0</RepeatDistance>
+    <TurnMode>StopAndTurn</TurnMode>
+  </WayPoint>
+</Mission>
