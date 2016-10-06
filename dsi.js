@@ -602,7 +602,7 @@ Ext.application({
     bing_aerial.isBaseLayer = true;
 
     //-->
-    
+
     mapPanel = Ext.create('GeoExt.panel.Map', {
       border: true,
       region: "center",
@@ -698,7 +698,7 @@ Ext.application({
           {isBaseLayer: false,visibility: false, iconCls: 'dem'}
         ),
         
-        bing_road, bing_hybrid, bing_aerial,
+        //bing_road, bing_hybrid, bing_aerial,
         
         new OpenLayers.Layer.Google(
           "Google Hybrid",
