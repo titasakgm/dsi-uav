@@ -574,6 +574,8 @@ Ext.application({
     utmgrid.hideInTree = true;
     utmgrid.setVisibility(false);
 
+    <!-- Remove Bing Map according to Google Notification 20161006
+
     // Add Bing Map
     bing_road = new OpenLayers.Layer.Bing({
       name: "Bing Road",
@@ -599,6 +601,8 @@ Ext.application({
     });
     bing_aerial.isBaseLayer = true;
 
+    //-->
+    
     mapPanel = Ext.create('GeoExt.panel.Map', {
       border: true,
       region: "center",
